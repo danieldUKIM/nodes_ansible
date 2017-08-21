@@ -12,6 +12,7 @@
     - python-dev
     - python3-dev
     - python3-pip
+    - rfkill
     become: yes
 
   - name: Install pip packages
