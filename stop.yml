@@ -5,6 +5,6 @@
 
   - name: Stop docker services
     docker_service:
-      project_src: ~/wishrem
+      project_src: ~/wishrem/controllers_dockers
       build: yes
       state: absent
