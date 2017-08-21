@@ -4,13 +4,13 @@
   tasks:
   - name: Copy code
     synchronize:
-      src: ../../
-      dest: ~/wishrem
+      src: ../controllers_dockers
+      dest: ~/wishrem/controllers_dockers
       recursive: yes
 
   - name: Start docker services
     docker_service:
-      project_src: ~/wishrem
+      project_src: ~/wishrem/controllers_dockers
       build: yes
       state: present
       restarted: true
@@ -37,11 +37,17 @@
       extra_args: -U
       editable: no
     with_items:
+    - "pyshark"
     - "git+https://github.com/uniflex/uniflex"
     - "git+https://github.com/uniflex/sbi"
+    - "git+https://github.com/uniflex/module_net_linux"
+    - "git+https://github.com/uniflex/module_wifi"
+    - "git+https://github.com/wishful-project/pyre"
+    - "git+https://github.com/uniflex/app_discovery_pyre"
+    - "git+https://github.com/danieldUKIM/wifi_flex"
     become: yes
-  - name: Copy code
-    synchronize:
-      src: ../../
-      dest: ~/wishrem
-      recursive: yes
+#  - name: Copy code
+#    synchronize:
+#      src: ../../
+#      dest: ~/wishrem
+#      recursive: yes
