@@ -5,7 +5,7 @@
   - name: Copy code
     synchronize:
       src: ../controllers_dockers
-      dest: ~/wishrem/controllers_dockers
+      dest: ~/wishrem
       recursive: yes
 
   - name: Start docker services
@@ -49,5 +49,5 @@
   - name: Copy code
     synchronize:
       src: ../wifi_flex/node_app
-      dest: ~/wishrem/node_app
+      dest: ~/wishrem
       recursive: yes
