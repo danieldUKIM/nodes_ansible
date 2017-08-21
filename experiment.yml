@@ -46,8 +46,8 @@
     - "git+https://github.com/uniflex/app_discovery_pyre"
     - "git+https://github.com/danieldUKIM/wifi_flex"
     become: yes
-#  - name: Copy code
-#    synchronize:
-#      src: ../../
-#      dest: ~/wishrem
-#      recursive: yes
+  - name: Copy code
+    synchronize:
+      src: ../wifi_flex/node_app
+      dest: ~/wishrem/node_app
+      recursive: yes
