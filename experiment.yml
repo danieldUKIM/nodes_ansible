@@ -48,6 +48,7 @@
     - "git+https://github.com/uniflex/module_wifi"
     - "git+https://github.com/wishful-project/pyre"
     - "git+https://github.com/uniflex/app_discovery_pyre"
+    - "git+https://github.com/danieldUKIM/rem_events"
     - "git+https://github.com/danieldUKIM/wifi_flex"
     become: yes
   - name: Copy code
